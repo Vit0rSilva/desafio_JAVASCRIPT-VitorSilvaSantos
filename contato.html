@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford</title>    
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/form.css" rel="stylesheet">
+    <script src="./js/form.js"></script>
+</head>
+<body>
+    <header>       
+        <div>
+            <img src="img/logo-ford-256.png" width="150" class="logo" />
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="lancamento.html">Lançamento</a>
+                </li>
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="forms">
+            <div>
+                <img src="img/xls 2.2 diesel.jpg" class="img-form">
+            </div>
+            <div>
+                <h2 class="title">Sobre Você</h2>
+            <form onsubmit="postContato(this);" action="index.html" method="get">
+                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
+                <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
+                <input type="text" name="cpf" placeholder="CPF*" class="fordform" id="cpfId" required>
+                <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" id="telId" required>
+                <select name="contato" class="fordform" required>
+                    <option selected>COMO DESEJA SER CONTATADO</option>
+                    <option>TELEFONE</option>
+                    <option>E-MAIL</option>
+                </select>
+                <select name="mensagem" class="fordform" required>
+                    <option selected>TIPO DE MENSAGEM</option>
+                    <option>RECLAMAÇÃO</option>
+                    <option>ELOGIO</option>
+                    <option>SUGESTÃO</option>
+                </select>
+                <textarea name="mensagem" placeholder="MENSAGEM" class="fordform" required></textarea>
+                <input type="checkbox" name="newsletter" value="newsletter" id="notification">Desejo receber novidades e promoções da Ford por e-mail <br><br>
+            <button type="submit" class="button-send">Enviar</button>
+            </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav id="social">
+            <ul>
+                <li><span class="redesociais">Redes Sociais</span></li>
+                <li><a href="https://www.facebook.com/FordBrasil/?locale=pt_BR" title="Facebook"><img src="img/facebook-50.png"></a></li>
+                <li><a href="https://www.youtube.com/fordbrasil" title="YouTube"><img src="img/youtube-squared-50.png"></a></li>
+                <li><a href="https://www.instagram.com/ford?igsh=MTBtaHU5NWx3cnpsag==" title="Instagram"><img src="img/instagram-logo-50.png"></a></li>
+            </ul>
+        </nav>
+        <div>
+           <img src="img/ford-96.png">
+        </div>
+    </footer>   
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+         $('#telId').mask('(00) 00000-0000');
+         $('#cpfId').mask('000.000.000-00', {reverse: false});
+    </script>
+
+</body>
+</html>
