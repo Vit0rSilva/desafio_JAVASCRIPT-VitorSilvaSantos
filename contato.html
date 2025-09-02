@@ -8,7 +8,7 @@
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/form.css" rel="stylesheet">
-    <script src="./js/form.js"></script>
+    <script src="form.js"></script>
 </head>
 <body>
     <header>       
@@ -37,11 +37,9 @@
             </div>
             <div>
                 <h2 class="title">Sobre Você</h2>
-            <form onsubmit="postContato(this);" action="index.html" method="get">
+            <form onsubmit="Post(this); return false" action="index.html" method="get">
                 <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
                 <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
-                <input type="text" name="cpf" placeholder="CPF*" class="fordform" id="cpfId" required>
                 <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" id="telId" required>
                 <select name="contato" class="fordform" required>
                     <option selected>COMO DESEJA SER CONTATADO</option>
@@ -55,6 +53,8 @@
                     <option>SUGESTÃO</option>
                 </select>
                 <textarea name="mensagem" placeholder="MENSAGEM" class="fordform" required></textarea>
+                <p id="termos">Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. <br>A qualquer momento, será possível editar ou remover tais dados.</p> <br>
+                <input type="checkbox" name="termos" value="termos" id="privacidade" required>Sim. Li e concordo com os <a href="https://www.ford.com.br/politica-de-privacidade/" id="priv-link"> Termos e Condições.</a> <br>
                 <input type="checkbox" name="newsletter" value="newsletter" id="notification">Desejo receber novidades e promoções da Ford por e-mail <br><br>
             <button type="submit" class="button-send">Enviar</button>
             </form>

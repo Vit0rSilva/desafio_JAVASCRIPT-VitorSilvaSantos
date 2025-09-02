@@ -37,8 +37,19 @@ main div {
     font-size: 14px;
 }
 
+#termos{
+    font-size: 9px;
+}
+
+#priv-link{
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 #notification{
     width: 13px;
+    height: 13px;
 }
 
 .title {
@@ -80,8 +91,8 @@ main div {
     }
 
     #notification{
-        width: 20px;
-        height: 15px;
+        width: 13px;
+        height: 13px;
     }
     
     .button-send{
